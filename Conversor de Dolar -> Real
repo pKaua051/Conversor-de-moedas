@@ -1,16 +1,30 @@
-function Converter() {
-  var valorElemento = document.getElementById("valor");
-  var valor = valorElemento.value;
-  //tranformado em valor numerico "parseFloat e parseInt"
-  var valorDolarNum = parseFloat(valor);
-  
-  //Calculo de transformação de dolar pra real
-  var valorEmReal = valorDolarNum * 5;
-  
-  //Variavel usada para puxar id do html
-  var elementoValorConvertido = document.getElementById("valorConvertido");
-  var valorConvertido = "O resultado em real R$:" + valorEmReal;
-  
-  //Coloquei variavel para ingressar o valor no HTML com ".innerHTML"
-  elementoValorConvertido.innerHTML = valorConvertido;
+function ConverterRealParaDolar() {
+ var valorElemento = document.getElementById("valorReal");
+ var valor = valorElemento.value;
+
+ //tranformado em valor numerico "parseFloat e parseInt"
+ var valorRealNum = parseFloat(valor);
+
+ //Calculo de transformação de dolar pra real
+ var valorEmDolar = valorRealNum * 0.19;
+
+ //Variavel usada para puxar id do html
+ var elementoValorConvertido = document.getElementById("valorConvertidoRealParaDolar);
+ var valorConvertidoParaDolar = "O resultado em dolar $:" + valorEmDolar;
+ 
+ //Coloquei variavel para ingressar o valor no HTML com ".innerHTML"
+ elementoValorConvertido.innerHTML = valorConvertidoParaDolar;
+}
+
+function ConverterRealParaEuro() {
+ var valorElementoEuro = document.getElementById("valorEuro");
+ var valorEuro = valorElementoEuro.value;
+
+ var valorRealNumerico = parseFloat(valorEuro);
+
+ var calculoValorEmRealParaEuro = valorRealNumerico * 0.16;
+
+ var elementoValorConvertidoParaEuro = document.getElementById("valorConvertidoRealParaEuro");
+ var valorConvertidoParaEuro ="O resultado em Euro €:" + calculoValorEmRealParaEuro;
+ elementoValorConvertidoParaEuro.innerHTML = valorConvertidoParaEuro;
 }
